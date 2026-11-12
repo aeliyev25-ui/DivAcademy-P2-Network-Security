@@ -1,0 +1,1 @@
+drop icmp 192.168.10.10 any -> 1.1.1.1 any (msg:"P2 IPS FORWARD TEST BLOCKED"; itype:8; sid:1000003; rev:1;)

@@ -1,0 +1,1 @@
+alert icmp 192.168.10.10 any -> 192.168.10.1 any (msg:"P2 IDS LAB Client ICMP Detected"; itype:8; sid:1000001; rev:1;)
