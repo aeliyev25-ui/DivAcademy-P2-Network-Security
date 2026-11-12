@@ -1,0 +1,8 @@
+[Unit]
+Description=P2 Automated Encrypted Database Backup
+After=postgresql.service
+Requires=postgresql.service
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/p2-db-backup.sh
+User=root

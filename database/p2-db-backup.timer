@@ -1,0 +1,8 @@
+[Unit]
+Description=P2 Daily Database Backup Timer
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Persistent=true
+Unit=p2-db-backup.service
+[Install]
+WantedBy=timers.target
