@@ -1,0 +1,10 @@
+# TESTED LIVE but not confirmed persisted in /etc/nftables.conf at last checkpoint.
+# Review carefully. Need NFQUEUE consumer running. `bypass` fails open if absent.
+# Can be appended to the persistent ruleset AFTER `table ip p2_nat` closing brace.
+# PLEASE verify these snippets against the actual VM, don't execute blindly.
+table inet p2_ips {
+    chain inspect {
+        type filter hook forward priority 10; policy accept;
+        iifname "ens34" oifname "ens33" ip saddr 192.168.10.10 ip daddr 1.1.1.1 ip protocol icmp counter queue num 0 bypass
+    }
+}
