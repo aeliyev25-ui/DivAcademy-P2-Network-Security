@@ -1,0 +1,11 @@
+[Unit]
+Description=P2 Canarytoken Monitoring
+After=local-fs.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/p2-canary.py
+Restart=always
+RestartSec=3
+User=root
+[Install]
+WantedBy=multi-user.target
