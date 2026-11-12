@@ -1,0 +1,1 @@
+Store REDACTED screenshots of actual lab tests here (not yet bundled). Check for usernames, passwords, API tokens, personal data and public IPs before publishing. Git ignore pattern excludes screenshots by default; use `git add -f evidence/your-redacted-shot.png` after review.

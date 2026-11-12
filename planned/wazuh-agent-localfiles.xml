@@ -1,0 +1,13 @@
+<!-- PLANNED EXAMPLE ONLY: append <localfile> elements inside Wazuh Agent ossec.conf;
+     do not replace entire ossec.conf. Paths differ per host. -->
+<!-- Client VM -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/p2-dlp/alerts.jsonl</location>
+</localfile>
+<!-- Honeypot VM -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/p2-canary/alerts.jsonl</location>
+</localfile>
+<!-- Cowrie data is in Docker named volume: host-visible path must be verified. -->

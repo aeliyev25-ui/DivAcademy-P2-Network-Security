@@ -1,0 +1,11 @@
+<!-- PLANNED example for P4 Wazuh Manager custom local_rules.xml.
+     Rule ID must be coordinated with P4. Validate with Wazuh rule tester. -->
+<group name="p2_dlp,">
+  <rule id="100220" level="12">
+    <decoded_as>json</decoded_as>
+    <field name="severity">^HIGH$</field>
+    <field name="action">^BLOCK$</field>
+    <description>P2 DLP HIGH preflight policy violation</description>
+    <group>dlp,</group>
+  </rule>
+</group>
